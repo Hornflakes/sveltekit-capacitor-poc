@@ -1,3 +1,3 @@
-#sveltekit-capacitor-poc
+# sveltekit-capacitor-poc
 
 sveltekit spa + capacitor
