@@ -33,6 +33,11 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@capacitor/android": "^5.5.1",
+		"@capacitor/cli": "^5.5.1",
+		"@capacitor/core": "^5.5.1",
+		"@capacitor/filesystem": "^5.1.4",
+		"@capacitor/geolocation": "^5.0.6",
 		"apexcharts": "^3.44.2",
 		"flowbite": "^2.2.0",
 		"flowbite-svelte": "^0.44.20",

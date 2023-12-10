@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { fly, slide } from 'svelte/transition';
 	import Loading from '$lib/components/Loading.svelte';
-	import heart from '$lib/assets/heart.svg';
 	import { getFavoritesContext } from '$lib/stores/favorites.js';
 	import { Heading, Label, Input, Card } from 'flowbite-svelte';
 	import { adaptCountries, type Country } from '$lib/models/country';
@@ -58,15 +57,9 @@
 	{#key countries}
 		<ul in:fly={{ y: 20 }} out:slide class="flex flex-col gap-4 my-8">
 			{#each countries as country}
-				<Card size="xs" padding="md">
+				<Card size="xs" padding="md" on:click={() => favorites.toggle(country)}>
 					<div class="flex items-center gap-4">
 						<Heading tag="h6">{country.name}</Heading>
-						<button
-							style="background-image: url({heart})"
-							class="heart"
-							class:active={$favorites[country.name]}
-							on:click={() => favorites.toggle(country)}
-						/>
 					</div>
 				</Card>
 			{/each}
