@@ -6,7 +6,9 @@ const config: CapacitorConfig = {
 	webDir: 'build',
 	server: {
 		androidScheme: 'https',
-		allowNavigation: ['*.leafletjs.com']
+		allowNavigation: ['*.leafletjs.com'],
+		url: 'http://10.0.2.2:5173',
+		cleartext: true
 	}
 };
 
